@@ -1,0 +1,14 @@
+{
+  "name": "piz",
+  "bin": {
+    "piz": "./src/piz.ts",
+    "unpiz": "./src/unpiz.ts"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
