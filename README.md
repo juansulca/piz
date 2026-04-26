@@ -1,6 +1,6 @@
 # Piz
 
-![piz file icon](./icons/icon_512x512@2x.png)
+<p align="center"><img src="./icons/icon_512x512@2x.png" alt="piz file icon" width="128" /></p>
 
 Make your files bigger using piz (reverse ZIP).
 
