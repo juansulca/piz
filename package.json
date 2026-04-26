@@ -4,7 +4,12 @@
     "piz": "./src/piz.ts",
     "unpiz": "./src/unpiz.ts"
   },
+  "scripts": {
+    "piz": "bun ./src/piz.ts",
+    "unpiz": "bun ./src/unpiz.ts"
+  },
   "type": "module",
+  "module": "./src/index.ts",
   "devDependencies": {
     "@types/bun": "latest"
   },

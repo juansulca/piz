@@ -8,10 +8,27 @@ const generateFill = (size: number) => {
   return Buffer.from(bytes).toString("base64");
 };
 
-const [name] = process.argv.slice(2);
+const args = process.argv.slice(2);
+
+if (args.includes("--help") || args.includes("-h")) {
+  console.log(`
+piz — pack a file into a .piz archive with random padding
+
+Usage:
+  piz <file>         Pack <file> into <file>.piz
+  piz --help, -h     Show this help message
+
+Example:
+  piz secret.txt     Creates secret.txt.piz
+`);
+  process.exit(0);
+}
+
+const [name] = args;
 
 if (!name) {
-  console.log("Please provide a file name.");
+  console.error("Error: please provide a file name.");
+  console.error("Run 'piz --help' for usage.");
   process.exit(1);
 }
 
@@ -30,5 +47,7 @@ const archive = new Bun.Archive({
   [filename]: await originalFile.arrayBuffer(),
 });
 
-const saveLocation = path.join(dir, "bundle.piz");
-await Bun.write(saveLocation, archive);
+const saveLocation = path.join(dir, `${filename}.piz`);
+const resultingSize = await Bun.write(saveLocation, archive);
+
+console.log(`resulting size: ${resultingSize}`);
