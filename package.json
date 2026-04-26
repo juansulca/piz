@@ -6,7 +6,8 @@
   },
   "scripts": {
     "piz": "bun ./src/piz.ts",
-    "unpiz": "bun ./src/unpiz.ts"
+    "unpiz": "bun ./src/unpiz.ts",
+    "build": "bun build ./src/piz.ts --compile --outfile ./build/piz && bun build ./src/unpiz.ts --compile --outfile ./build/unpiz"
   },
   "type": "module",
   "module": "./src/index.ts",
