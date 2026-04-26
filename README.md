@@ -1,8 +1,12 @@
 # Piz
 
+![piz file icon](./icons/icon_512x512@2x.png)
+
 Make your files bigger using piz (reverse ZIP).
 
-![Alt text](./demo.gif)
+![piz demo gif](./demo.gif)
+
+Built using Bun for blazingly fast performance 🔥🔥⚡. Written with zero dependencies.
 
 To install dependencies:
 
